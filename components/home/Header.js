@@ -19,10 +19,30 @@ const Header = () => {
       </TouchableOpacity>
 
       <View style={styles.iconsContainer}>
-        <Text style={{ color: "white" }}>Dummy</Text>
-        <Text style={{ color: "white" }}>Dummy</Text>
-        <Text style={{ color: "white" }}>Dummy</Text>
-        <Text style={{ color: "white" }}>Dummy</Text>
+        <TouchableOpacity>
+          <Image
+            source={{
+              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/plus-2-math.png",
+            }}
+            style={styles.icon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            source={{
+              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/like--v1.png",
+            }}
+            style={styles.icon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            source={{
+              uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/facebook-messenger.png",
+            }}
+            style={styles.icon}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -34,6 +54,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginHorizontal: 20,
+    borderWidth: 2,
+    borderColor: "blue",
   },
   logo: {
     height: 50,
@@ -47,6 +69,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderWidth: 2,
     borderColor: "yellow",
+  },
+  icon: {
+    width: 30,
+    height: 30,
+    marginLeft: 10,
   },
 });
 
