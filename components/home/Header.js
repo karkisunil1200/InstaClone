@@ -36,6 +36,9 @@ const Header = () => {
           />
         </TouchableOpacity>
         <TouchableOpacity>
+          <View style={styles.unreadBadge}>
+            <Text style={styles.unreadBadgeText}>33</Text>
+          </View>
           <Image
             source={{
               uri: "https://img.icons8.com/fluency-systems-regular/60/ffffff/facebook-messenger.png",
@@ -74,6 +77,23 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     marginLeft: 10,
+  },
+  unreadBadge: {
+    backgroundColor: "red",
+    position: "absolute",
+    left: 20,
+    bottom: 18,
+    width: 25,
+    height: 18,
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 100,
+  },
+
+  unreadBadgeText: {
+    color: "white",
+    fontWeight: "600",
   },
 });
 
