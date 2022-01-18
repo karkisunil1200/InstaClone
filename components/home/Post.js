@@ -1,10 +1,21 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const Post = () => {
   return (
-    <View style={{ marginBottom: 30 }}>
-      <Text style={{ color: "white" }}>This is from the post </Text>
+    <View style={{ marginBottom: 70, borderWidth: 3, borderColor: "red" }}>
+      <PostHeader />
+    </View>
+  );
+};
+
+const PostHeader = ({ post }) => {
+  return (
+    <View>
+      <View>
+        <Image />
+        <Text>This is text uder images</Text>
+      </View>
     </View>
   );
 };
