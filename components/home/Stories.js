@@ -4,19 +4,29 @@ import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 
 const USERS = [
   {
-    user: "karkisunil",
+    user: "sunil",
     image:
-      "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
+      "https://img.icons8.com/external-linector-lineal-color-linector/64/000000/external-avatar-man-avatar-linector-lineal-color-linector-5.png",
+  },
+
+  {
+    user: "Subash",
+    image:
+      "https://img.icons8.com/external-linector-lineal-color-linector/64/000000/external-avatar-man-avatar-linector-lineal-color-linector-6.png",
   },
   {
-    user: "karkisunil",
-    image:
-      "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
+    user: "Nita",
+    image: "https://img.icons8.com/color-glass/48/000000/avatar.png",
   },
   {
-    user: "karkisunil",
+    user: "Hazel",
     image:
-      "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
+      "https://img.icons8.com/external-color-for-better-life-royyan-wijaya/64/000000/external-avatar-avatar-i-color-for-better-life-royyan-wijaya-6.png",
+  },
+  {
+    user: "Myra",
+    image:
+      "https://img.icons8.com/external-color-for-better-life-royyan-wijaya/64/000000/external-avatar-avatar-i-color-for-better-life-royyan-wijaya.png",
   },
 ];
 
@@ -40,10 +50,12 @@ const Stories = () => {
 
 const styles = StyleSheet.create({
   story: {
-    width: 80,
-    height: 80,
-    borderColor: "red",
-    borderWidth: 2,
+    width: 70,
+    height: 70,
+    borderRadius: 50,
+    marginLeft: 6,
+    borderWidth: 3,
+    borderColor: "#ff8501",
   },
 });
 
