@@ -1,46 +1,25 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
-// import { USERS } from "../../data/users";
-
-const USERS = [
-  {
-    user: "sunil",
-    image:
-      "https://img.icons8.com/external-linector-lineal-color-linector/64/000000/external-avatar-man-avatar-linector-lineal-color-linector-5.png",
-  },
-
-  {
-    user: "Subash",
-    image:
-      "https://img.icons8.com/external-linector-lineal-color-linector/64/000000/external-avatar-man-avatar-linector-lineal-color-linector-6.png",
-  },
-  {
-    user: "Nita",
-    image: "https://img.icons8.com/color-glass/48/000000/avatar.png",
-  },
-  {
-    user: "Hazel",
-    image:
-      "https://img.icons8.com/external-color-for-better-life-royyan-wijaya/64/000000/external-avatar-avatar-i-color-for-better-life-royyan-wijaya-6.png",
-  },
-  {
-    user: "Myra",
-    image:
-      "https://img.icons8.com/external-color-for-better-life-royyan-wijaya/64/000000/external-avatar-avatar-i-color-for-better-life-royyan-wijaya.png",
-  },
-];
+import { USERS } from "../../data/users";
 
 const Stories = () => {
   return (
     <View style={{ marginBottom: 13, borderWidth: 2, borderColor: "yellow" }}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {USERS.map((story, index) => (
-          <Image
-            source={{
-              uri: story.image,
-            }}
-            style={styles.story}
-          />
+          <View key={index} style={{ alignItems: "center" }}>
+            <Image
+              source={{
+                uri: story.image,
+              }}
+              style={styles.story}
+            />
+            <Text style={{ color: "white", alignItem: "center" }}>
+              {story.user.length > 11
+                ? story.user.slice(0, 8).toLowerCase() + "..."
+                : story.user.toLowerCase()}
+            </Text>
+          </View>
         ))}
       </ScrollView>
       <Text style={{ color: "white" }}>Stories</Text>
