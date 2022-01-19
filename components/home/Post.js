@@ -31,6 +31,7 @@ const Post = ({ post }) => {
       <PostImage post={post} />
       <View style={{ marginHorizon: 15, marginTop: 10 }}>
         <PostFooter post={post} />
+        <Likes post={post} />
       </View>
     </View>
   );
@@ -70,11 +71,15 @@ const PostImage = ({ post }) => {
 };
 
 const PostFooter = ({ post }) => (
-  <View style={{ flexDirection: "row" }}>
+  <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
     <View style={styles.leftFooterIconsContainer}>
       <Icon imgStyle={styles.footerIcon} imgUrl={postFooterIcons[0].imageUrl} />
       <Icon imgStyle={styles.footerIcon} imgUrl={postFooterIcons[1].imageUrl} />
       <Icon imgStyle={styles.footerIcon} imgUrl={postFooterIcons[2].imageUrl} />
+    </View>
+
+    <View>
+      <Icon imgStyle={styles.footerIcon} imgUrl={postFooterIcons[3].imageUrl} />
     </View>
   </View>
 );
@@ -86,6 +91,14 @@ const Icon = ({ imgStyle, imgUrl }) => {
     </TouchableOpacity>
   );
 };
+
+const Likes = ({ post }) => (
+  <View style={{ flexDirection: "row", marginTop: 4 }}>
+    <Text style={{ color: "white", fontWeight: "600" }}>
+      {post.likes} likes
+    </Text>
+  </View>
+);
 
 const styles = StyleSheet.create({
   story: {
